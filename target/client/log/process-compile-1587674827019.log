@@ -1,0 +1,31 @@
+Process
+=======
+compile
+
+Command Line
+============
+/home/lcs/graalvm-svm-linux-20.1.0-ea+26/bin/native-image --report-unsupported-elements-at-runtime -Djdk.internal.lambda.eagerlyInitialize=false --no-server -H:+ExitAfterRelocatableImageWrite -H:+SharedLibrary -H:+AddAllCharsets -H:+ReportExceptionStackTraces -H:-DeadlockWatchdogExitOnTimeout -H:DeadlockWatchdogInterval=0 --features=org.graalvm.home.HomeFinderFeature -H:TempDirectory=/home/lcs/graalVmTest/build/client/x86_64-linux/gvm/tmp -H:EnableURLProtocols=http,https -H:ReflectionConfigurationFiles=/home/lcs/graalVmTest/build/client/x86_64-linux/gvm/reflectionconfig-x86_64-linux.json -H:JNIConfigurationFiles=/home/lcs/graalVmTest/build/client/x86_64-linux/gvm/jniconfig-x86_64-linux.json -H:ResourceConfigurationFiles=/home/lcs/graalVmTest/build/client/x86_64-linux/gvm/resourceconfig-x86_64-linux.json -Dsvm.platform=org.graalvm.nativeimage.Platform$LINUX_AMD64 -cp /home/lcs/graalVmTest/build/classes/java/main: io.tlf.graal.test.App
+
+Output
+======
+[io.tlf.graal.test.app:12742]    classlist:   2,668.97 ms,  0.96 GB
+[io.tlf.graal.test.app:12742]        (cap):     917.43 ms,  0.96 GB
+[io.tlf.graal.test.app:12742]        setup:   2,992.25 ms,  0.96 GB
+[io.tlf.graal.test.app:12742]     (clinit):     568.28 ms,  3.22 GB
+[io.tlf.graal.test.app:12742]   (typeflow):  19,610.09 ms,  3.22 GB
+[io.tlf.graal.test.app:12742]    (objects):  18,875.84 ms,  3.22 GB
+[io.tlf.graal.test.app:12742]   (features):   1,900.52 ms,  3.22 GB
+[io.tlf.graal.test.app:12742]     analysis:  41,707.32 ms,  3.22 GB
+[io.tlf.graal.test.app:12742]     universe:     904.85 ms,  3.22 GB
+[io.tlf.graal.test.app:12742]      (parse):   6,637.48 ms,  4.29 GB
+[io.tlf.graal.test.app:12742]     (inline):   2,135.50 ms,  4.29 GB
+[io.tlf.graal.test.app:12742]    (compile):  24,573.73 ms,  5.10 GB
+[io.tlf.graal.test.app:12742]      compile:  34,821.37 ms,  5.10 GB
+[io.tlf.graal.test.app:12742]        image:   3,211.05 ms,  5.10 GB
+[io.tlf.graal.test.app:12742]        write:     273.57 ms,  5.10 GB
+[io.tlf.graal.test.app:12742]      [total]:  86,940.43 ms,  5.10 GB
+
+
+Result
+======
+result: 0

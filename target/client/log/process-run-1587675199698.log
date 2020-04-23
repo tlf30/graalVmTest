@@ -1,0 +1,18 @@
+Process
+=======
+run
+
+Command Line
+============
+/home/lcs/.gluon/substrate/Android/platform-tools/adb shell monkey -p .graalVmTest 1
+
+Output
+======
+* daemon not running; starting now at tcp:5037
+* daemon started successfully
+error: no devices/emulators found
+
+
+Result
+======
+result: 1

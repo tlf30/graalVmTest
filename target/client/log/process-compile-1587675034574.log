@@ -1,0 +1,35 @@
+Process
+=======
+compile
+
+Command Line
+============
+/home/lcs/graalvm-svm-linux-20.1.0-ea+26/bin/native-image --report-unsupported-elements-at-runtime -Djdk.internal.lambda.eagerlyInitialize=false --no-server -H:+ExitAfterRelocatableImageWrite -H:+SharedLibrary -H:+AddAllCharsets -H:+ReportExceptionStackTraces -H:-DeadlockWatchdogExitOnTimeout -H:DeadlockWatchdogInterval=0 --features=org.graalvm.home.HomeFinderFeature -H:TempDirectory=/home/lcs/graalVmTest/build/client/aarch64-android/gvm/tmp -H:EnableURLProtocols=http,https -H:ReflectionConfigurationFiles=/home/lcs/graalVmTest/build/client/aarch64-android/gvm/reflectionconfig-aarch64-android.json -H:JNIConfigurationFiles=/home/lcs/graalVmTest/build/client/aarch64-android/gvm/jniconfig-aarch64-android.json -H:ResourceConfigurationFiles=/home/lcs/graalVmTest/build/client/aarch64-android/gvm/resourceconfig-aarch64-android.json -H:CompilerBackend=llvm -H:-SpawnIsolates -Dsvm.targetArch=aarch64 -H:+UseOnlyWritableBootImageHeap -H:+UseCAPCache -H:CAPCacheDir=/home/lcs/graalVmTest/build/client/aarch64-android/gvm/capcache -H:CustomLD=/home/lcs/.gluon/substrate/Android/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/bin/ld.lld -Dsvm.platform=org.graalvm.nativeimage.Platform$LINUX_AARCH64 -cp /home/lcs/graalVmTest/build/classes/java/main: io.tlf.graal.test.App
+
+Output
+======
+[io.tlf.graal.test.app:12964]    classlist:   2,631.75 ms,  0.96 GB
+[io.tlf.graal.test.app:12964]        (cap):     383.98 ms,  0.96 GB
+[io.tlf.graal.test.app:12964]        setup:   2,476.80 ms,  0.96 GB
+[io.tlf.graal.test.app:12964]     (clinit):     550.89 ms,  3.21 GB
+[io.tlf.graal.test.app:12964]   (typeflow):  18,035.89 ms,  3.21 GB
+[io.tlf.graal.test.app:12964]    (objects):  19,991.33 ms,  3.21 GB
+[io.tlf.graal.test.app:12964]   (features):   1,689.82 ms,  3.21 GB
+[io.tlf.graal.test.app:12964]     analysis:  41,086.35 ms,  3.21 GB
+[io.tlf.graal.test.app:12964]     universe:   1,032.15 ms,  3.21 GB
+[io.tlf.graal.test.app:12964]      (parse):   5,705.86 ms,  4.09 GB
+[io.tlf.graal.test.app:12964]     (inline):   2,256.08 ms,  4.09 GB
+[io.tlf.graal.test.app:12964]    (compile):  34,848.39 ms,  5.20 GB
+[io.tlf.graal.test.app:12964]    (bitcode):     424.24 ms,  5.20 GB
+[io.tlf.graal.test.app:12964]    (prelink):   5,621.03 ms,  5.20 GB
+[io.tlf.graal.test.app:12964]       (llvm):  56,779.57 ms,  5.20 GB
+[io.tlf.graal.test.app:12964]   (postlink):   1,926.97 ms,  5.20 GB
+[io.tlf.graal.test.app:12964]      compile: 107,863.13 ms,  5.20 GB
+[io.tlf.graal.test.app:12964]        image:   3,648.74 ms,  5.20 GB
+[io.tlf.graal.test.app:12964]        write:     489.98 ms,  5.20 GB
+[io.tlf.graal.test.app:12964]      [total]: 159,587.50 ms,  5.20 GB
+
+
+Result
+======
+result: 0

@@ -1,0 +1,19 @@
+Process
+=======
+compile
+
+Command Line
+============
+/home/lcs/graalvm-ce-java11-20.0.0/bin/native-image --report-unsupported-elements-at-runtime -Djdk.internal.lambda.eagerlyInitialize=false --no-server -H:+ExitAfterRelocatableImageWrite -H:+SharedLibrary -H:+AddAllCharsets -H:+ReportExceptionStackTraces -H:-DeadlockWatchdogExitOnTimeout -H:DeadlockWatchdogInterval=0 --features=org.graalvm.home.HomeFinderFeature -H:TempDirectory=/home/lcs/graalVmTest/build/client/aarch64-android/gvm/tmp -H:EnableURLProtocols=http,https -H:ReflectionConfigurationFiles=/home/lcs/graalVmTest/build/client/aarch64-android/gvm/reflectionconfig-aarch64-android.json -H:JNIConfigurationFiles=/home/lcs/graalVmTest/build/client/aarch64-android/gvm/jniconfig-aarch64-android.json -H:ResourceConfigurationFiles=/home/lcs/graalVmTest/build/client/aarch64-android/gvm/resourceconfig-aarch64-android.json -H:CompilerBackend=llvm -H:-SpawnIsolates -Dsvm.targetArch=aarch64 -H:+UseOnlyWritableBootImageHeap -H:+UseCAPCache -H:CAPCacheDir=/home/lcs/graalVmTest/build/client/aarch64-android/gvm/capcache -H:CustomLD=/home/lcs/.gluon/substrate/Android/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/bin/ld.lld -Dsvm.platform=org.graalvm.nativeimage.Platform$LINUX_AARCH64 -cp /home/lcs/graalVmTest/build/classes/java/main: io.tlf.graal.test.App
+
+Output
+======
+Error: Could not find option 'DeadlockWatchdogExitOnTimeout'. Use -H:PrintFlags= to list all available options.
+Error: Could not find option 'DeadlockWatchdogInterval'. Use -H:PrintFlags= to list all available options.
+Error: Use -H:+ReportExceptionStackTraces to print stacktrace of underlying exception
+Error: Image build request failed with exit status 1
+
+
+Result
+======
+result: 1

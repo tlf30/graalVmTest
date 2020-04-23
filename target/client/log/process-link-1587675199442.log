@@ -1,0 +1,15 @@
+Process
+=======
+link
+
+Command Line
+============
+/home/lcs/.gluon/substrate/Android/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/bin/clang /home/lcs/graalVmTest/build/client/aarch64-android/gvm/graalVmTest/launcher.o /home/lcs/graalVmTest/build/client/aarch64-android/gvm/graalVmTest/javafx_adapter.o /home/lcs/graalVmTest/build/client/aarch64-android/gvm/graalVmTest/touch_events.o /home/lcs/graalVmTest/build/client/aarch64-android/gvm/graalVmTest/glibc_shim.o /home/lcs/graalVmTest/build/client/aarch64-android/gvm/graalVmTest/attach_adapter.o /home/lcs/graalVmTest/build/client/aarch64-android/gvm/tmp/SVM-1587675043214/io.tlf.graal.test.app.o /home/lcs/graalVmTest/build/client/aarch64-android/gvm/tmp/SVM-1587675043214/llvm/llvm.o -ljava -lnio -lzip -lnet -lprefs -ljvm -lstrictmath -lz -ldl -lj2pkcs11 -lsunec -ljaas -lextnet -target aarch64-linux-android21 -fPIC -fuse-ld=gold -Wl,--rosegment,--gc-sections,-z,noexecstack -shared -landroid -llog -lffi -llibchelper -o /home/lcs/graalVmTest/build/client/aarch64-android/libgraalVmTest.so -L/home/lcs/graalvm-svm-linux-20.1.0-ea+26/lib/svm/clibraries/android-aarch64 -L/home/lcs/.gluon/substrate/javaStaticSdk/15-ea+2/android-aarch64/labs-staticjdk/lib/static
+
+Output
+======
+
+
+Result
+======
+result: 0
